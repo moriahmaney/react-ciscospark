@@ -20,7 +20,7 @@
     "test:automation:space": "wdio wdio.conf.js --suite space",
     "test:automation:recents": "wdio wdio.conf.js --suite recents",
     "test:tap": "cross-env TAP=true wdio wdio.conf.js --suite tap",
-    "test:integration": "wdio wdio.conf.js --suite recents ; sleep 60 ; wdio wdio.conf.js --suite multiple ; sleep 60 ; wdio wdio.conf.js --suite oneOnOne ; sleep 60 ; wdio wdio.conf.js --suite space",
+    "test:integration": "wdio wdio.conf.js --suite recents ; sleep 30 ; wdio wdio.conf.js --suite multiple ; sleep 30 ; wdio wdio.conf.js --suite oneOnOne ; sleep 30 ; wdio wdio.conf.js --suite space",
     "jest": "cross-env TZ=utc jest --config=jest.config.json",
     "static-analysis": "npm run eslint",
     "lint:eslint": "eslint --ignore-path .gitignore $(npm run --silent lint:eslint:ci-reporter)",
