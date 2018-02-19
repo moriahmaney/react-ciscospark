@@ -31,7 +31,7 @@ const chromeCapabilities = {
   },
   idleTimeout: 300,
   maxDuration: 3600,
-  seleniumVersion: '3.5.0',
+  seleniumVersion: '3.9.0',
   chromedriverVersion: '2.35',
   platform
 };
