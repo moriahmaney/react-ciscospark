@@ -31,7 +31,8 @@ const chromeCapabilities = {
   },
   idleTimeout: 300,
   maxDuration: 3600,
-  seleniumVersion: '3.4.0',
+  seleniumVersion: '3.5.0',
+  chromedriverVersion: '2.35',
   platform
 };
 const firefoxCapabilities = {
@@ -89,6 +90,12 @@ exports.config = {
       './test/journeys/specs/recents/**/*.js'
     ],
     multiple: [
+      './test/journeys/specs/multiple/**/*.js'
+    ],
+    integration: [
+      './test/journeys/specs/oneOnOne/**/*.js',
+      './test/journeys/specs/space/**/*.js',
+      './test/journeys/specs/recents/**/*.js',
       './test/journeys/specs/multiple/**/*.js'
     ]
   },
