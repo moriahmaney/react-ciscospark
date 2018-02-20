@@ -33,6 +33,7 @@ const chromeCapabilities = {
   maxDuration: 3600,
   seleniumVersion: '3.9.0',
   chromedriverVersion: '2.35',
+  recordScreenshots: false,
   platform
 };
 const firefoxCapabilities = {
@@ -41,6 +42,7 @@ const firefoxCapabilities = {
   idleTimeout: 300,
   maxDuration: 3600,
   seleniumVersion: '3.4.0',
+  recordScreenshots: false,
   platform
 };
 let mochaTimeout = 30000;
