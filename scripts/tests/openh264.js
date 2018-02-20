@@ -41,6 +41,9 @@ function platformToShortName(platform) {
   if (platform.toLowerCase().includes('os x') || platform === 'darwin') {
     return 'mac';
   }
+  if (platform.toLowerCase() === ('windows 10')) {
+    return 'windows';
+  }
 
   return undefined;
 }
@@ -53,7 +56,7 @@ function platformToShortName(platform) {
 async function injectProfile(def) {
   if (def.browserName.toLowerCase().includes('firefox')) {
     const platform = platformToShortName(def.platform);
-    if (platform !== 'mac') {
+    if (platform !== 'mac' && platform !== 'windows') {
       throw new Error(`No tooling implemented for injecting h264 into ${platform} (${def.platform})`);
     }
 
@@ -82,11 +85,12 @@ async function exists(dir) {
 
 exports.download = async function download() {
   await rimraf(`${PROFILE_DIR}/mac`);
+  await rimraf(`${PROFILE_DIR}/windows`);
   await spawn(`${__dirname}/openh264.sh`, []);
 };
 
 exports.inject = async function inject(browsers) {
-  if (!await exists(`${PROFILE_DIR}/mac`)) {
+  if (!await exists(`${PROFILE_DIR}/mac`) || !await exists(`${PROFILE_DIR}/windows`)) {
     await exports.download();
   }
 

@@ -33,7 +33,6 @@ const chromeCapabilities = {
   maxDuration: 3600,
   seleniumVersion: '3.9.0',
   chromedriverVersion: '2.35',
-  recordScreenshots: false,
   platform
 };
 const firefoxCapabilities = {
@@ -41,8 +40,7 @@ const firefoxCapabilities = {
   name: `react-widget-${suite}`,
   idleTimeout: 300,
   maxDuration: 3600,
-  seleniumVersion: '3.4.0',
-  recordScreenshots: false,
+  version: '57',
   platform
 };
 let mochaTimeout = 30000;
@@ -83,7 +81,7 @@ exports.config = {
       './test/journeys/specs/tap/**/*.js'
     ],
     oneOnOne: [
-      './test/journeys/specs/oneOnOne/**/*.js'
+      './test/journeys/specs/oneOnOne/global/meet.js'
     ],
     space: [
       './test/journeys/specs/space/**/*.js'
