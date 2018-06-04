@@ -11,7 +11,7 @@ export const elements = {
   rosterList: '.ciscospark-roster-scrolling-list',
   addParticipantArea: '.ciscospark-roster-add-participant',
   addParticipantResultsArea: '.ciscospark-roster-add-participant-results',
-  addParticipantResultItem: '.ciscospark-people-list-item:nth-child(1)',
+  addParticipantResultItem: '.ciscospark-people-list-name',
   addPeopleButton: '.ciscospark-roster-add-people',
   searchInput: '.ciscospark-roster-add-participant-search-input',
   closeSearchButton: 'button[aria-label="Close Search"]'
