@@ -95,6 +95,14 @@ export default (options) => {
           })
         },
         {
+          test: /\.scss$/,
+          include: [
+            path.resolve(__dirname, '..', '..', 'packages', 'node_modules'),
+            path.resolve(__dirname, '..', '..', 'src')
+          ],
+          use: ['style-loader', 'css-loader', 'sass-loader']
+        },
+        {
           // Do not transform vendor`s CSS with CSS-modules
           test: /\.css$/,
           include: [path.resolve(__dirname, '..', '..', 'node_modules')],
