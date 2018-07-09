@@ -51,7 +51,7 @@ export default (options) => {
         path.resolve(__dirname, '..', '..', 'packages', 'node_modules'),
         'node_modules'
       ],
-      extensions: ['.js', '.css', '.json']
+      extensions: ['.js', '.css', '.json', '.scss']
     },
     module: {
       rules: [
@@ -98,7 +98,8 @@ export default (options) => {
           test: /\.scss$/,
           include: [
             path.resolve(__dirname, '..', '..', 'packages', 'node_modules'),
-            path.resolve(__dirname, '..', '..', 'src')
+            path.resolve(__dirname, '..', '..', 'src'),
+            path.resolve(__dirname, '..', '..', 'node_modules')
           ],
           use: ['style-loader', 'css-loader', 'sass-loader']
         },
